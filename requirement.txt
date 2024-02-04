@@ -1,0 +1,11 @@
+# requirements.txt
+
+# Frontend Dependencies
+Flask==2.0.1
+Jinja2==3.0.1
+
+# Backend Dependencies
+pytesseract==0.3.8
+# You also need to have Tesseract-OCR installed on your system.
+
+
