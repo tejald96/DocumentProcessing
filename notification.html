@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333; /* Dark text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff; /* Light sky blue for header */
+            color: #333;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        h1 {
+            color: #4169E1; /* Royal blue color for heading */
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .verification-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .document-image {
+            max-width: 100%;
+            border: 1px solid #4682B4; /* Steel blue color for border */
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .verification-details {
+            max-width: 400px;
+        }
+
+        button {
+            background-color: #4682B4; /* Steel blue color for button */
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5F9EA0; /* Lighter steel blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Document Verification</h1>
+    </header>
+
+    <main>
+        <div class="verification-container">
+            <div class="document-image">
+                <!-- Display the uploaded document image here -->
+                <img src="path/to/document/image.jpg" alt="Document Image">
+            </div>
+            <div class="verification-details">
+                <h2>Document Details</h2>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Date of Birth:</strong> 01/01/1990</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <!-- Add more details as needed -->
+            </div>
+        </div>
+        <button onclick="verifyDocument()">Verify Document</button>
+    </main>
+
+    <script>
+        function verifyDocument() {
+            // Implement document verification logic here
+            alert("Document verification completed!");
+            // Redirect to the next page or perform additional actions as needed
+            // window.location.href = "next_page.html";
+        }
+    </script>
+
+</body>
+
+</html>

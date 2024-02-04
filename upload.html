@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Verification Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        #kyc-app {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff; /* White background for the KYC form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066cc; /* Blue color for the heading */
+        }
+
+        .note {
+            background-color: #e6f7ff; /* Light blue background for the note section */
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #0066cc; /* Blue color for labels */
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Light grey border */
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .file-attachment {
+            font-size: 20px;
+            cursor: pointer;
+            color: #0066cc; /* Blue color for the attachment icon */
+        }
+
+        button {
+            background-color: #0066cc; /* Blue color for the button */
+            color: #fff; /* White text color */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004080; /* Darker blue on hover */
+        }
+    </style>
+    <script>
+
+        function submitKYC() {
+            // Redirect to the processing page immediately
+            window.location.href = "processing.html";
+        }
+
+
+	</script>
+</head>
+<body>
+    <div id="kyc-app">
+        <h1>VeriID</h1>
+        <div class="note">
+            <p><strong>Please note:</strong> In the KYC process, you typically need to provide one document from each category:</p>
+            <ul>
+                <li>One proof of identity (e.g., Passport, Voter’s Identity Card, Driving Licence, Aadhaar Card, etc.)</li>
+                <li>One proof of address (e.g., Registered Sale Agreement or Lease on residence, Maintenance bill of the flat, Recent utility bills not more than three months old, Self-declaration provided by the supreme or high court judges)</li>
+            </ul>
+        </div>
+
+        <label for="proof-identity">
+            Proof of Identity:
+            <input type="file" class="file-attachment" id="file-identity">
+        </label>
+        <select id="proof-identity">
+            <option value="passport">Passport</option>
+			<option value="voter-id">Voter’s Identity Card</option>
+			<option value="drivingLicence">Driving Licence</option>
+			<option value="aadhaarCard">Aadhaar Letter/Card</option>
+			<option value="nregaCard">NREGA Card</option>
+			<option value="nationalPopulationRegister">Letter issued by the National Population Register</option>
+			<option value="panCard">PAN card with photograph</option>
+			<option value="bankIdentityCard">Identity card issued by scheduled commercial banks, public sector undertakings, or any public financial institutions</option>
+			<option value="collegeIdentityCard">Identity cards issued by your college (affiliated with Universities)</option>
+			<option value="professionalBodies">Identification document provided by professional bodies like the ICWAI, ICAI, Bar Council, ICSI, etc</option>
+        </select>
+
+        <label for="proof-address">
+            Proof of Address:
+            <input type="file" class="file-attachment" id="file-address">
+        </label>
+        <select id="proof-address">
+			<option value="voter-card">Voter’s Card/Passport/Driving Licence</option>
+			<option value="sale-agreement">Registered Sale Agreement or Lease</option>
+			<option value="maintenanceBill">Maintenance bill of the flat</option>
+			<option value="utilityBill">Recent utility bills (electricity, gas, telephone, water) not more than three months old</option>
+			<option value="selfDeclaration">Self-declaration provided by the supreme or high court judges</option>
+
+        </select>
+
+        <!-- Additional elements for KYC application -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <button onclick="submitKYC()">Submit Document</button>
+		</div>
+
+</body>
+</html>
